@@ -5,9 +5,17 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const pug = require('gulp-pug');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+gulp.task('jade', () => {
+  return gulp.src('app/*.jade')
+    .pipe(pug({pretty: true}))
+    .pipe(gulp.dest('.tmp/'))
+    .pipe(reload({stream: true}));
+});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -59,7 +67,7 @@ gulp.task('lint:test', () => {
 });
 
 gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+  return gulp.src('.tmp/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
@@ -83,7 +91,8 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*',
-    '!app/*.html'
+    '!app/*.html',
+    '!app/*.jade'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -92,7 +101,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['jade','styles', 'scripts', 'fonts'], () => {
     browserSync({
       notify: false,
       port: 9000,
@@ -105,11 +114,11 @@ gulp.task('serve', () => {
     });
 
     gulp.watch([
-      'app/*.html',
         'app/images/**/*',
       '.tmp/fonts/**/*'
     ]).on('change', reload);
 
+    gulp.watch('app/**/*.jade', ['jade']);
     gulp.watch('app/styles/**/*.scss', ['styles']);
       gulp.watch('app/scripts/**/*.js', ['scripts']);
       gulp.watch('app/fonts/**/*', ['fonts']);
@@ -154,12 +163,12 @@ gulp.task('wiredep', () => {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  gulp.src('app/*.jade')
     .pipe(wiredep({
       exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('app/'));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {

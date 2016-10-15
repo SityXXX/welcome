@@ -1,0 +1,144 @@
+doctype html
+html(class='no-js', lang='uk-ua')
+  head
+    title welcome
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    // Place favicon.ico in the root directory
+
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='/bower_components/bootstrap-select/dist/css/bootstrap-select.css')
+    // endbower
+    // endbuild
+
+    // build:css styles/main.css
+    link(type='text/css', rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+    // build:js scripts/vendor/modernizr.js
+    // endbuild
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/modernizr/modernizr.js')
+    script(src='/bower_components/bootstrap-select/dist/js/bootstrap-select.js')
+    // endbower
+    // endbuild
+
+    // build:js scripts/plugins.js
+
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+
+    // endbuild
+
+  body
+
+    header.page-header
+
+      nav.navbar.navbar-default
+
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#collaps-menu' aria-expanded='false')
+              span.sr-only Меню
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand.visible-xs(href="#") Welcome Truskavets
+
+
+
+          .collapse.navbar-collapse#collaps-menu
+
+            ul.nav.navbar-nav.menu
+              li.menu__item.active
+                a(href='#') Головна
+              li.menu__item
+                a.menu__link(href='#') Трускавець
+              li.main-menu__item
+                a.menu__link(href='#') Санаторії
+              li.main-menu__item
+                a.menu__link(href='#') Ціни
+              li.main-menu__item
+                a.menu__link(href='#') Карта
+              li.main-menu__item
+                a.menu__link(href='#') Контакти
+
+            ul.nav.navbar-nav.navbar-right.language
+              li.drobdown
+                a.dropdown-toggle(href='#', data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Укр
+                  span.caret
+                ul.dropdown-menu
+                  li
+                    a(href='#') Українська
+                  li.devider(role='separator')
+                  li
+                    a(href='#') Русский
+      .container
+
+        .logo
+          a.logo__link
+            img.img-responsive(src='../images/logo.svg', onerror='this.src=\'image.png\'')
+
+
+        .page-header__info
+          .page-header__info-phone +38 0(67) 477-44-53
+          .page-header__info-time пн-пт: з 10:00 до 18:00, сб: з 10:00 до 15:00
+
+
+        .search
+          form.search__wrap(action='/', method='GET')
+            input.search__field(placeholder='Наприклад: Вілла Христина, Санаторій Шахтар')
+
+        .booking
+          .booking__heading Оберіть найкращий відпочинок в Трускавці
+          .booking__panel
+            .booking__panel-top-side
+              .row
+
+                .col-sm-6.col-md-3
+                  .form-group
+                    label(for='resort') Відпочинок:
+                    select.selectpicker#resort(name="resort")
+                      option(value='Rixos') Rixos
+                      option(value='Rixos') Rixos
+                      option(value='Rixos') Rixos
+                      option(value='Rixos') Rixos
+
+                .col-sm-6.col-md-3
+                  .form-group
+                    label(for='resort') Номер:
+                    select.selectpicker#resort(name="resort")
+                      option(value='Rixos') Rixos
+                      option(value='Rixos') Rixos
+                      option(value='Rixos') Rixos
+                      option(value='Rixos') Rixos
+
+
+                .col-sm-6.col-md-3
+                  .form-group
+                    label(for='resort')
+
+          .booking__panel-top-side
+            .row
+
+
+
+
+    // build:js scripts/main.js
+    // endbuild

@@ -1,0 +1,82 @@
+.page-header {
+
+  background: url('../images/header-bg-xs.jpg') #78b0eb no-repeat top center;
+  height: 100vh;
+  min-height: 836px;
+  max-height: 1080px;
+  background-position: bottom right;
+
+  @media (min-width: $screen-sm-min) {
+
+    background-image: url('../images/header-bg-sm.jpg');
+    background-position: bottom right;
+
+  }
+
+  @media (min-width: $screen-md-min) {
+
+    background-image: url('../images/header-bg-md.jpg');
+    background-position: bottom right;
+
+  }
+
+  @media (min-width: $screen-lg-min) {
+
+    background-image: url('../images/header-bg.jpg');
+    background-position: bottom center;
+
+  }
+
+  &__info {
+
+    color: #ffffff;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 40px;
+
+    &-phone,
+    &-time {
+
+      display: inline-block;
+
+    }
+
+    &-phone {
+
+      margin-right: 10px;
+
+      &::before {
+
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 25px;
+        height: 25px;
+        background: url('../images/phone.png') no-repeat;
+
+      }
+
+    }
+
+    &-time {
+
+      margin-left: 10px;
+
+      &::before {
+
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 25px;
+        height: 25px;
+        background: url('../images/clock.png') no-repeat;
+
+      }
+
+    }
+
+  }
+
+}

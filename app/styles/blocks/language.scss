@@ -1,0 +1,16 @@
+.language {
+
+  li {
+
+    & > .dropdown-menu {
+
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+
+    }
+
+  }
+
+}

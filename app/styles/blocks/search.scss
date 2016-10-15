@@ -1,0 +1,59 @@
+.search {
+
+  text-align: center;
+  margin-bottom: 30px;
+
+  &__wrap {
+
+    @media (min-width: $screen-sm-min) {
+
+      display: inline-block;
+      width: 400px;
+      position: relative;
+
+      &::after {
+
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+        background: url('../images/magnifier.png') no-repeat;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -11px;
+
+      }
+
+    }
+
+  }
+
+  &__field {
+
+    width: 100%;
+    border: none;
+    border-top: 1px solid $white;
+    @include border-radius(20px);
+    @include box-shadow(inset 1px 1px 1px 1px rgba($gray, .95));
+    height: 35px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &::-moz-placeholder {
+
+      font-style: italic;
+
+    }
+
+    &::-webkit-input-placeholder {
+
+      font-style: italic;
+
+    }
+
+  }
+
+
+}
