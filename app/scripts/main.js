@@ -4,3 +4,18 @@ if (!Modernizr.svg) {
       this.attr('src').replace('.svg','.png')
     });
 }
+
+$('.selectpicker').selectpicker({
+
+  width: '100%'
+
+});
+
+var lang = $('html').attr('lang');
+
+$('.input-daterange').datepicker({
+
+  language: lang+'.js'
+
+});
+

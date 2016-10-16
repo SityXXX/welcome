@@ -22,7 +22,7 @@
         position: absolute;
         right: 10px;
         top: 50%;
-        margin-top: -11px;
+        margin-top: -12px;
 
       }
 
@@ -39,7 +39,7 @@
     @include box-shadow(inset 1px 1px 1px 1px rgba($gray, .95));
     height: 35px;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 40px;
 
     &::-moz-placeholder {
 

@@ -11,6 +11,7 @@ html(class='no-js', lang='uk-ua')
     // build:css styles/vendor.css
     // bower:css
     link(rel='stylesheet', href='/bower_components/bootstrap-select/dist/css/bootstrap-select.css')
+    link(rel='stylesheet', href='/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css')
     // endbower
     // endbuild
 
@@ -26,6 +27,9 @@ html(class='no-js', lang='uk-ua')
     script(src='/bower_components/jquery/dist/jquery.js')
     script(src='/bower_components/modernizr/modernizr.js')
     script(src='/bower_components/bootstrap-select/dist/js/bootstrap-select.js')
+    script(src='/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
+    script(src='/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uk.min.js')
+    script(src='/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js')
     // endbower
     // endbuild
 
@@ -59,7 +63,7 @@ html(class='no-js', lang='uk-ua')
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand.visible-xs(href="#") Welcome Truskavets
+            a.navbar-brand.visible-xs(href='#') Welcome Truskavets
 
 
 
@@ -81,7 +85,7 @@ html(class='no-js', lang='uk-ua')
 
             ul.nav.navbar-nav.navbar-right.language
               li.drobdown
-                a.dropdown-toggle(href='#', data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Укр
+                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Укр
                   span.caret
                 ul.dropdown-menu
                   li
@@ -114,31 +118,55 @@ html(class='no-js', lang='uk-ua')
                 .col-sm-6.col-md-3
                   .form-group
                     label(for='resort') Відпочинок:
-                    select.selectpicker#resort(name="resort")
+                    select.selectpicker#resort(name='resort')
                       option(value='Rixos') Rixos
                       option(value='Rixos') Rixos
                       option(value='Rixos') Rixos
                       option(value='Rixos') Rixos
 
-                .col-sm-6.col-md-3
+                .col-sm-6.col-md-2
                   .form-group
-                    label(for='resort') Номер:
-                    select.selectpicker#resort(name="resort")
-                      option(value='Rixos') Rixos
-                      option(value='Rixos') Rixos
-                      option(value='Rixos') Rixos
-                      option(value='Rixos') Rixos
+                    label(for='room') Номер:
+                    select.selectpicker#room(name='resort')
+                      option(value='Стандарт') Стандарт
+                      option(value='Покращений стандарт') Покращений стандарт
+                      option(value='Люкс') Люкс
+                      option(value='Президентський') Президентський
 
 
-                .col-sm-6.col-md-3
+                .col-sm-8.col-md-4.input-daterange
+                  .row
+                    .col-sm-6
+                      .form-group
+                        label(for='date_arrive') Дата заїзду:
+                        input.form-control#date_arrive(name='date_arrive', type='text')
+                    .col-sm-6
+                      .form-group
+                        label(for='date_leave') Дата виїзду:
+                        input.form-control#date_leave(name='date_leave', type='text')
+
+
+                .col-sm-4.col-md-1
                   .form-group
-                    label(for='resort')
+                    label(for='days') Днів:
+                    input.form-control#days(name='days', type='text', readonly)
 
-          .booking__panel-top-side
-            .row
+                .col-sm-6.col-md-1
+                  .form-group
+                    label(for='adults') Дорослих:
+                    select.selectpicker#adults(name='adults')
+                      option(value='1') 1
+                      option(value='2') 2
+                      option(value='2') 3
+                      option(value='3') 4
+
+
+            .booking__panel-top-side
+              .row
 
 
 
 
     // build:js scripts/main.js
+    script(src='scripts/main.js')
     // endbuild
