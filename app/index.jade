@@ -28,8 +28,6 @@ html(class='no-js', lang='uk-ua')
     script(src='/bower_components/modernizr/modernizr.js')
     script(src='/bower_components/bootstrap-select/dist/js/bootstrap-select.js')
     script(src='/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')
-    script(src='/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uk.min.js')
-    script(src='/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js')
     // endbower
     // endbuild
 
@@ -102,7 +100,8 @@ html(class='no-js', lang='uk-ua')
 
         .page-header__info
           .page-header__info-phone +38 0(67) 477-44-53
-          .page-header__info-time пн-пт: з 10:00 до 18:00, сб: з 10:00 до 15:00
+          .page-header__info-time пн-пт: з 10:00 до 18:00,
+            span сб: з 10:00 до 15:00
 
 
         .search
@@ -111,7 +110,7 @@ html(class='no-js', lang='uk-ua')
 
         .booking
           .booking__heading Оберіть найкращий відпочинок в Трускавці
-          .booking__panel
+          form.booking__panel(action='/', method='POST')
             .booking__panel-top-side
               .row
 
@@ -134,35 +133,73 @@ html(class='no-js', lang='uk-ua')
                       option(value='Президентський') Президентський
 
 
-                .col-sm-8.col-md-4.input-daterange
+                .col-sm-10.col-md-4.input-daterange
                   .row
-                    .col-sm-6
+                    .col-xs-6
                       .form-group
                         label(for='date_arrive') Дата заїзду:
                         input.form-control#date_arrive(name='date_arrive', type='text')
-                    .col-sm-6
+                    .col-xs-6
                       .form-group
                         label(for='date_leave') Дата виїзду:
                         input.form-control#date_leave(name='date_leave', type='text')
 
 
-                .col-sm-4.col-md-1
+                .col-xs-4.col-sm-2.col-md-1
                   .form-group
                     label(for='days') Днів:
                     input.form-control#days(name='days', type='text', readonly)
 
-                .col-sm-6.col-md-1
+                .col-xs-4.col-sm-6.col-md-1
                   .form-group
                     label(for='adults') Дорослих:
                     select.selectpicker#adults(name='adults')
                       option(value='1') 1
                       option(value='2') 2
-                      option(value='2') 3
-                      option(value='3') 4
+                      option(value='3') 3
+                      option(value='4') 4
+
+                .col-xs-4.col-sm-6.col-md-1
+                  .form-group
+                    label(for='children') Дітей:
+                    select.selectpicker#children(name='children')
+                      option(value='0') 0
+                      option(value='1') 1
+                      option(value='2') 2
+                      option(value='3') 3
 
 
-            .booking__panel-top-side
+            .booking__panel-bottom-side
               .row
+
+                .col-sm-4.col-md-2
+                  .form-group
+                    label.sr-only(for='name') Ім'я
+                    input.form-control#name(type='text', name='name')
+
+                .col-sm-4.col-md-2
+                  .form-group
+                    label.sr-only(for='suname') Прізвище
+                    input.form-control#suname(type='text', name='suname')
+
+                .col-sm-4.col-md-2
+                  .form-group
+                    label.sr-only(for='second_name') По-батькові
+                    input.form-control#second_name(type='text', name='second_name')
+
+                .col-sm-4.col-md-2
+                  .form-group
+                    label.sr-only(for='phone') Номер телефону
+                    input.form-control#phone(type='text', name='phone')
+
+                .col-sm-4.col-md-2
+                  .form-group
+                    label.sr-only(for='email') E-mail
+                    input.form-control#email(type='text', name='email')
+
+                .col-sm-4.col-md-2
+                  .form-group
+                    button.btn.btn-submit(type='submit', name='sub') Бронювати
 
 
 

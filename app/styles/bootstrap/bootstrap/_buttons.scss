@@ -87,6 +87,9 @@ a.btn {
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
+.btn-submit {
+  @include button-variant($btn-submit-color, $btn-submit-bg, $btn-submit-border);
+}
 
 
 // Link buttons

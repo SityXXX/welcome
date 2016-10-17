@@ -1,8 +1,12 @@
-// import fonts
-@import "base/fonts.scss";
+// import fontawesome
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
 
 // import bootstrap
 @import "bootstrap/_bootstrap.scss";
+
+// import fonts
+@import "base/fonts.scss";
+@import "base/btn.scss";
 
 // import blocks
 @import "blocks/page-header.scss";

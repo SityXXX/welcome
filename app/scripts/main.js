@@ -15,7 +15,7 @@ var lang = $('html').attr('lang');
 
 $('.input-daterange').datepicker({
 
-  language: lang+'.js'
+  language: 'uk-ua'
 
 });
 

@@ -175,6 +175,10 @@ $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
+$btn-submit-color:               $white;
+$btn-submit-bg:                  darken($brand-secondary, 7%);
+$btn-submit-border:              transparent;
+
 $btn-link-disabled-color:        $gray-light !default;
 
 // Allows for customizing button radius independently from global border radius

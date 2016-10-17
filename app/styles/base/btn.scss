@@ -1,0 +1,16 @@
+.btn-submit {
+
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 40px;
+  text-shadow: 1px 1px 1px rgba($gray, .7);
+
+  @media (min-width: $screen-md-min) {
+
+    width: 100%;
+
+  }
+
+
+
+}

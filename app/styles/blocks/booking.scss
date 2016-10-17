@@ -19,23 +19,37 @@
     color: $white;
     text-align: center;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 300;
     margin-bottom: 10px;
+
+    @media (min-width: $screen-sm-min) {
+
+      font-size: 40px;
+      margin-bottom: 25px;
+
+    }
+
+  }
+
+  &__panel-top-side,
+  &__panel-bottom-side {
+
+    padding: 20px 20px 5px;
 
   }
 
   &__panel-top-side {
 
-    background-color: rgba($brand-primary, .6);
-    padding: 10px 20px;
-    @include border-top-radius(5px);
+    background-color: rgba($brand-primary, .5);
+    @include border-top-radius($border-radius-base);
 
   }
 
   &__panel-bottom-side {
 
     background-color: #ececec;
+    @include border-bottom-radius($border-radius-base);
 
   }
 
