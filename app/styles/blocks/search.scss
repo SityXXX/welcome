@@ -33,11 +33,10 @@
   &__field {
 
     width: 100%;
-    border: none;
-    border-top: 1px solid $white;
+    border: 1px solid $white;
     @include border-radius(20px);
-    @include box-shadow(inset 1px 1px 1px 1px rgba($gray, .95));
-    height: 35px;
+    @include box-shadow(inset 1px 1px 1px 1px rgba($gray, .3));
+    height: 40px;
     padding-left: 15px;
     padding-right: 40px;
 

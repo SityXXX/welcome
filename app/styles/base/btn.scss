@@ -2,8 +2,8 @@
 
   font-weight: 500;
   text-transform: uppercase;
-  padding-left: 40px;
   text-shadow: 1px 1px 1px rgba($gray, .7);
+  position: relative;
 
   @media (min-width: $screen-md-min) {
 
@@ -11,6 +11,11 @@
 
   }
 
+  span::before {
+
+    margin-right: 5px;
+
+  }
 
 
 }
