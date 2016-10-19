@@ -4,10 +4,16 @@
 
     & > .dropdown-menu {
 
-      background-color: transparent;
+      background-color: rgba($brand-primary, .4);
       border: none;
       border-radius: 0;
       padding: 0;
+
+    }
+
+    & > a {
+
+      color: #ffffff;
 
     }
 

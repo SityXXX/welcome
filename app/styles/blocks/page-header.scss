@@ -1,11 +1,11 @@
 .page-header {
 
   background: url('../images/header-bg-xs.jpg') #78b0eb no-repeat top center;
-  height: 100vh;
   min-height: 836px;
   max-height: 1080px;
   background-position: bottom right;
   position: relative;
+  padding-bottom: 20px;
 
   &::after {
 
@@ -33,6 +33,7 @@
 
     background-image: url('../images/header-bg-md.jpg');
     background-position: bottom right;
+    height: 100vh;
 
   }
 
@@ -48,7 +49,7 @@
     color: #ffffff;
     text-align: center;
     font-weight: 300;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     &-phone,
     &-time {
@@ -60,7 +61,8 @@
       @media (min-width: $screen-sm-min) {
 
         margin: 0;
-        font-size: 20px;
+        font-size: 14px;
+        display: inline-block;
 
       }
 
@@ -87,6 +89,12 @@
         width: 25px;
         height: 25px;
         background: url('../images/phone.png') no-repeat;
+
+      }
+
+      @media (min-width: $screen-sm-min) {
+
+        margin-bottom: 0;
 
       }
 
