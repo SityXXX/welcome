@@ -167,7 +167,9 @@ gulp.task('wiredep', () => {
 
   gulp.src('app/*.jade')
     .pipe(wiredep({
-      exclude: ['bootstrap-sass'],
+      exclude: ['bootstrap-sass',
+        'bootstrap-select/dist/css/bootstrap-select.css',
+        'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app/'));

@@ -1,8 +1,10 @@
-// import fontawesome
-@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+// import vendor stylesheets
+@import "vendors/datepicker/bootstrap-datepicker3.css";
+@import "vendors/fontawesome/font-awesome.scss";
+@import "vendors/select/bootstrap-select";
 
 // import bootstrap
-@import "bootstrap/_bootstrap.scss";
+@import "vendors/bootstrap/_bootstrap.scss";
 
 // import fonts
 @import "base/fonts.scss";
