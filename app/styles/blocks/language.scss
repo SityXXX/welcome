@@ -1,5 +1,13 @@
 .language {
 
+  float: left;
+
+  @media (min-width: $screen-sm-min) {
+
+    float: none;
+
+  }
+
   li {
 
     & > .dropdown-menu {

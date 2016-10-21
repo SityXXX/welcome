@@ -59,8 +59,6 @@ html(class='no-js', lang='uk-ua')
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand.visible-xs(href='#') Welcome Truskavets
-
 
 
           .collapse.navbar-collapse#collaps-menu
@@ -79,16 +77,19 @@ html(class='no-js', lang='uk-ua')
               li.main-menu__item
                 a.menu__link(href='#') Контакти
 
-            ul.nav.navbar-nav.navbar-right.language
-              li.drobdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Укр
-                  span.caret
-                ul.dropdown-menu
-                  li
-                    a(href='#') Українська
-                  li.devider(role='separator')
-                  li
-                    a(href='#') Русский
+
+          ul.nav.navbar-nav.navbar-right.language
+            li.drobdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Укр
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Українська
+                li.devider(role='separator')
+                li
+                  a(href='#') Русский
+
+
       .container
 
         .logo
@@ -195,7 +196,7 @@ html(class='no-js', lang='uk-ua')
                     label.sr-only(for='email') E-mail
                     input.form-control#email(type='text', name='email')
 
-                .col-sm-3.col-sm-push-9.col-md-2
+                .col-sm-3.col-sm-push-9.col-md-2.col-md-push-0
                   .form-group
                     button.btn.btn-submit(type='submit', name='sub')
                       span.fa.fa-check

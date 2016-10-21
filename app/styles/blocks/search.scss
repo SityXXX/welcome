@@ -5,26 +5,27 @@
 
   &__wrap {
 
+    position: relative;
+
+    &::after {
+
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 25px;
+      height: 25px;
+      background: url('../images/magnifier.png') no-repeat;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      margin-top: -12px;
+
+    }
+
     @media (min-width: $screen-sm-min) {
 
       display: inline-block;
       width: 400px;
-      position: relative;
-
-      &::after {
-
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        width: 25px;
-        height: 25px;
-        background: url('../images/magnifier.png') no-repeat;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        margin-top: -12px;
-
-      }
 
     }
 
