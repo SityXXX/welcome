@@ -1,10 +1,10 @@
+// import bootstrap
+@import "vendors/bootstrap/_bootstrap.scss";
+
 // import vendor stylesheets
 @import "vendors/datepicker/bootstrap-datepicker3.css";
 @import "vendors/fontawesome/font-awesome.scss";
 @import "vendors/select/bootstrap-select";
-
-// import bootstrap
-@import "vendors/bootstrap/_bootstrap.scss";
 
 // import fonts
 @import "base/fonts.scss";

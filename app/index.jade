@@ -60,6 +60,16 @@ html(class='no-js', lang='uk-ua')
               span.icon-bar
               span.icon-bar
 
+          ul.nav.navbar-nav.navbar-right.language
+            li.drobdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Укр
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Українська
+                li.devider(role='separator')
+                li
+                  a(href='#') Русский
 
           .collapse.navbar-collapse#collaps-menu
 
@@ -76,18 +86,6 @@ html(class='no-js', lang='uk-ua')
                 a.menu__link(href='#') Карта
               li.main-menu__item
                 a.menu__link(href='#') Контакти
-
-
-          ul.nav.navbar-nav.navbar-right.language
-            li.drobdown
-              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Укр
-                span.caret
-              ul.dropdown-menu
-                li
-                  a(href='#') Українська
-                li.devider(role='separator')
-                li
-                  a(href='#') Русский
 
 
       .container
@@ -204,6 +202,18 @@ html(class='no-js', lang='uk-ua')
 
   .component-wrapper
     .container
+      .system-message-container
+
+      main.content
+        .category-list
+          header.page-heading
+            h1.page-heading__header
+          .categories
+            .row
+              .col-md-4
+                a.categories__link
+
+
 
 
 

@@ -26,6 +26,8 @@
       }
       &:hover,
       &:focus {
+        border-left-color: transparent;
+        border-bottom-color: $brand-primary;
         text-decoration: none;
         background-color: $nav-link-hover-bg;
       }
@@ -51,7 +53,15 @@
     &:hover,
     &:focus {
       //background-color: $nav-link-hover-bg;
-      border-color: $brand-secondary;
+      border-left-color: $brand-primary;
+
+      @media (min-width: $screen-sm-min) {
+
+        border-left-color: transparent;
+        border-bottom-color: $brand-primary;
+
+      }
+
     }
   }
 

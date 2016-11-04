@@ -656,10 +656,11 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
 .input-daterange {
   width: 100%;
 }
+/*
 .input-daterange input {
   text-align: center;
 }
-/*
+
 .input-daterange input:first-child {
   border-radius: 3px 0 0 3px;
 }

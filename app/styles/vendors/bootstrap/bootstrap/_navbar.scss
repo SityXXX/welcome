@@ -58,6 +58,7 @@
   -webkit-overflow-scrolling: touch;
   position: absolute;
   top: 100%;
+  width: 100%;
 
   &.in {
     overflow-y: auto;
@@ -301,7 +302,7 @@
 // the nav the full height of the horizontal nav (above 768px).
 
 .navbar-nav {
-  margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+  margin: 0 (-$navbar-padding-horizontal); //($navbar-padding-vertical / 2)
 
   > li > a {
     padding-top:    10px;
@@ -316,9 +317,9 @@
       float: none;
       width: auto;
       margin-top: 0;
-      background-color: transparent;
+      //background-color: transparent;
       border: 0;
-      box-shadow: none;
+      //box-shadow: none;
       > li > a,
       .dropdown-header {
         padding: 5px 15px 5px 25px;
@@ -494,9 +495,7 @@
       color: $white;
       font-weight: 500;
       text-transform: uppercase;
-      border-right: 3px solid transparent;
-      border-left: 3px solid transparent;
-      border-bottom: 3px solid transparent;
+      border: 3px solid transparent;
       @include transition(color .5s);
 
       &:hover,
@@ -504,11 +503,14 @@
         //color: $navbar-default-link-hover-color;
         background-color: $navbar-default-link-hover-bg;
         border-left-color: rgba($brand-secondary, .5);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
         @include transition(border .3s);
 
         @media (min-width: $screen-sm-min) {
 
           border-left-color: transparent;
+          border-right-color: transparent;
           border-bottom-color: rgba($brand-secondary, .5);
 
         }
@@ -571,7 +573,7 @@
       &,
       &:hover,
       &:focus {
-        border-color: $brand-secondary;
+        border-left-color: $brand-primary;
         color: $white;
       }
     }
@@ -580,11 +582,11 @@
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
-          color: $navbar-default-link-color;
+          color: $white;
           &:hover,
           &:focus {
-            color: $navbar-default-link-hover-color;
-            background-color: $navbar-default-link-hover-bg;
+            color: $white;
+            background-color: $brand-primary;
           }
         }
         > .active > a {

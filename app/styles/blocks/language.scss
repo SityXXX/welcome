@@ -5,6 +5,7 @@
   @media (min-width: $screen-sm-min) {
 
     float: none;
+    margin-right: 0;
 
   }
 
@@ -22,6 +23,34 @@
     & > a {
 
       color: #ffffff;
+
+      .navbar-default &:hover,
+      .navbar-default &:focus {
+
+        border-left-color: rgba($brand-primary, 0.5);
+
+        @media (min-width: $screen-sm-min) {
+
+          border-left-color: transparent;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .navbar-default & > .open > a,
+  .navbar-default & > .open > a:hover,
+  .navbar-default & > .open > a:focus {
+
+    border-left-color: $white;
+
+    @media (min-width: $screen-sm-min) {
+
+      border-left-color: transparent;
+      border-bottom-color: $brand-primary;
 
     }
 
